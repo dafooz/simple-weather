@@ -1,6 +1,7 @@
 import React from 'react';
-import { Icon, Text } from 'react-native-ui-kitten';
-import { StyleSheet, View, TouchableWithoutFeedback } from 'react-native';
+import { View } from 'react-native';
+import { locationStyles } from '../styles/styles';
+import { LocationIcon, RefreshIcon, LocationText, IconButton } from './base';
 
 export const Location = ({
   city,
@@ -12,33 +13,20 @@ export const Location = ({
   refresh: () => void;
 }) => {
   return (
-    <View style={{ flexDirection: 'row', flexGrow: 1 }}>
-      <View style={styles.container}>
+    <View style={locationStyles.mainContainer}>
+      <View style={locationStyles.container}>
         <View>
-          <Icon name="pin-outline" width={20} height={20} fill="#000" />
+          <LocationIcon />
         </View>
         <View>
-          <Text style={styles.text}>{`${city}, ${country}`}</Text>
+          <LocationText city={city} country={country} />
         </View>
       </View>
-      <View style={{ alignItems: 'flex-end', justifyContent: 'center' }}>
-        <TouchableWithoutFeedback onPress={refresh}>
-          <Icon name="refresh-outline" width={20} height={20} fill="#000" />
-        </TouchableWithoutFeedback>
+      <View style={locationStyles.refreshButton}>
+        <IconButton onPress={refresh}>
+          <RefreshIcon />
+        </IconButton>
       </View>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    flexGrow: 10,
-  },
-  text: {
-    fontSize: 20,
-    color: '#000',
-    marginLeft: 10,
-  },
-});

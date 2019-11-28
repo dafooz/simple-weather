@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text } from 'react-native';
+import { WeatherIcon } from './base';
+import { currentWeatherStyles } from '../styles/styles';
 
 export const CurrentWeather = ({
   weather: { icon, short, long },
@@ -11,46 +13,13 @@ export const CurrentWeather = ({
     long: string;
   };
 }) => (
-  <View style={styles.container}>
+  <View style={currentWeatherStyles.container}>
     <View>
-      <Image
-        style={styles.weatherIcon}
-        source={{
-          uri: `https://openweathermap.org/img/wn/${icon}@2x.png`,
-        }}
-      />
+      <WeatherIcon icon={icon} />
     </View>
     <View>
-      <Text style={styles.short}>{short}</Text>
-      <Text style={styles.long}>{long}</Text>
+      <Text style={currentWeatherStyles.short}>{short}</Text>
+      <Text style={currentWeatherStyles.long}>{long}</Text>
     </View>
   </View>
 );
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'column',
-    width: '100%',
-    marginBottom: 15,
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexGrow: 2,
-  },
-  weatherIcon: {
-    width: 180,
-    height: 180,
-  },
-  short: {
-    marginTop: 10,
-    fontSize: 50,
-    textAlign: 'center',
-    color: '#000',
-    textTransform: 'capitalize',
-  },
-  long: {
-    fontSize: 20,
-    textAlign: 'center',
-    color: '#000',
-    textTransform: 'capitalize',
-  },
-});

@@ -1,14 +1,11 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text } from 'react-native';
+import { HumidityIcon } from './base';
+import { humidityStyles } from '../styles/styles';
 
 export const Humidity = ({ humidity }: { humidity: number }) => (
   <View style={{ flexGrow: 1, flexDirection: 'row', alignItems: 'center' }}>
-    <Image source={require('../assets/icons/humidity.png')} style={{ width: 25, height: 25 }} />
-    <Text
-      style={{
-        marginLeft: 20,
-        fontSize: 20,
-      }}
-    >{`${humidity}%`}</Text>
+    <HumidityIcon />
+    <Text style={humidityStyles.text}>{`${humidity}%`}</Text>
   </View>
 );
