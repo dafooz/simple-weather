@@ -5,19 +5,21 @@ export const transformForecast = (raw: RawForecast): Forecast => {
   return {
     location: {
       city: raw.name,
-      country: raw.sys.country
+      country: raw.sys.country,
     },
     weather: {
       icon: raw.weather[0].icon,
       short: raw.weather[0].main,
-      long: raw.weather[0].description
+      long: raw.weather[0].description,
     },
     info: {
-      ...raw.main
+      ...raw.main,
     },
     wind: {
       direction: getWindDirection(raw.wind.deg),
-      speed: raw.wind.speed
-    }
+      speed: raw.wind.speed,
+    },
   };
 };
+
+export const transformMStoKMH = (speed: number) => Math.round(speed * 3.6 * 100) / 100;

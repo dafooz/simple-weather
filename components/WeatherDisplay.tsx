@@ -8,6 +8,7 @@ import { CurrentWeather } from './CurrentWeather';
 import { Temperature } from './Temperature';
 import { Humidity } from './Humidity';
 import { WindSpeed } from './WindSpeed';
+import { weatherDisplayStyles } from '../styles/styles';
 
 export const WeatherDisplay = ({
   forecast: { location, weather, wind, info },
@@ -17,7 +18,7 @@ export const WeatherDisplay = ({
   refresh: () => void;
   setRefreshing: (refreshing: boolean) => void;
 }) => (
-  <View style={styles.container}>
+  <View style={weatherDisplayStyles.container}>
     <Location city={location.city} country={location.country} refresh={refresh} />
     <CurrentWeather weather={weather} />
     <Temperature temp={info.temp} temp_min={info.temp_min} temp_max={info.temp_max} />
@@ -25,10 +26,3 @@ export const WeatherDisplay = ({
     <WindSpeed direction={wind.direction} speed={wind.speed} />
   </View>
 );
-
-const styles = StyleSheet.create({
-  container: {
-    margin: 20,
-    flex: 1,
-  },
-});

@@ -1,14 +1,12 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text } from 'react-native';
+import { windSpeedStyles } from '../styles/styles';
+import { WindSpeedIcon } from './base';
+import { transformMStoKMH } from '../utils/dataTransformer';
 
 export const WindSpeed = ({ direction, speed }: { direction: string; speed: number }) => (
-  <View style={{ flexGrow: 1, flexDirection: 'row', alignItems: 'center' }}>
-    <Image source={require('../assets/icons/wind.png')} style={{ width: 25, height: 25 }} />
-    <Text
-      style={{
-        marginLeft: 20,
-        fontSize: 20,
-      }}
-    >{`${direction} @ ${Math.round(speed * 3.6 * 100) / 100} km/h`}</Text>
+  <View style={windSpeedStyles.container}>
+    <WindSpeedIcon />
+    <Text style={windSpeedStyles.text}>{`${direction} @ ${transformMStoKMH(speed)} km/h`}</Text>
   </View>
 );
