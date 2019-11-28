@@ -11,22 +11,20 @@ export const Location = ({
   city: string;
   country: string;
   refresh: () => void;
-}) => {
-  return (
-    <View style={locationStyles.mainContainer}>
-      <View style={locationStyles.container}>
-        <View>
-          <LocationIcon />
-        </View>
-        <View>
-          <LocationText city={city} country={country} />
-        </View>
+}) => (
+  <View style={locationStyles.mainContainer}>
+    <View style={locationStyles.container}>
+      <View>
+        <LocationIcon />
       </View>
-      <View style={locationStyles.refreshButton}>
-        <IconButton onPress={refresh}>
-          <RefreshIcon />
-        </IconButton>
+      <View>
+        <LocationText city={city} country={country} />
       </View>
     </View>
-  );
-};
+    <View style={locationStyles.refreshButton}>
+      <IconButton onPress={refresh}>
+        <RefreshIcon />
+      </IconButton>
+    </View>
+  </View>
+);
