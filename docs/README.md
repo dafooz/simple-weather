@@ -2,15 +2,17 @@
 
 ## An introduction to React native
 
-### Before starting
+### Before the workshop...
 
-A little work is required before starting. It's to make sure you have everything ready before the workshop starts...
+A little work to make sure you have everything ready before the workshop starts is required:
 
-1. [Access to the Weather API](./openweather.md)
-2. [Prerequisites](./prerequisites.md)
+1. [Get access to the Weather API](./openweather.md)
+2. [Get your laptop ready for creating the app](./prerequisites.md)
 
-### During the workshop
+### During the workshop...
 
-1. High level introduction to React Native
-2. Differences between React Native, Flutter, ...
-3. Hands on app creation
+After a high level introduction to React Native, and presenting the differences between React Native, Flutter, ... we will create a small weather app to practice some of the basic concepts of React Native.
+
+The final app will look like this:
+
+<div width="100%" style="display: flex; justify-content: center"><img src='./assets/appscreen-1.png' height="500"/></div>
