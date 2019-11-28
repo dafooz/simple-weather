@@ -40,7 +40,3 @@ The quickest way to get started is to run the Expo client on your physical iOS o
 ---
 
 Documentation taken from the [expo docs](https://docs.expo.io/versions/v35.0.0/get-started/installation/).
-
----
-
-Next: [Get the project running ➤](./project.md)

@@ -4,10 +4,10 @@
 
 ### Before starting
 
-A little work is required before starting
+A little work is required before starting. It's to make sure you have everything ready before the workshop starts...
 
-1. [Access to the Weather API](./_docs/openweather.md)
-2. [Prerequisites](./_docs/prerequisites.md)
+1. [Access to the Weather API](./openweather.md)
+2. [Prerequisites](./prerequisites.md)
 
 ### During the workshop
 
