@@ -16,7 +16,6 @@ export const WeatherDisplay = ({
 }: {
   forecast: Forecast;
   refresh: () => void;
-  setRefreshing: (refreshing: boolean) => void;
 }) => (
   <View style={weatherDisplayStyles.container}>
     <Location city={location.city} country={location.country} refresh={refresh} />

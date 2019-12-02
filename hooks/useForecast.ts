@@ -27,7 +27,6 @@ export const useForecast = () => {
 
   const getWeather = async (latitude: number, longitude: number) => {
     let url = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${API_KEY}`;
-    // `http://samples.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=b6907d289e10d714a6e88b30761fae22`;
 
     const forecast = transformForecast(await fetch(url).then(forecast => forecast.json()));
     setForecast(forecast);
@@ -47,6 +46,5 @@ export const useForecast = () => {
     refreshWeather,
     lastRefresh,
     refreshing,
-    setRefreshing,
   };
 };
