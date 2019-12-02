@@ -80,12 +80,12 @@ Our application will be accessing these data in order to react accordingly. More
 
 ## 🗒 Your first task
 
-```
-⚒ Copy your API key
+<div background="rgba(0, 0, 131, 0.5)">
+🔑 Copy your API key
 
 Locate the <code>api_key.ts</code> file in the root of the project and replace the sample key by your own.
 
-```
+</div>
 
 > You can find your API key in your profile on the [OpenWeather website](https://home.openweathermap.org/api_keys).
 >
