@@ -78,16 +78,14 @@ The transformed data are then "saved" together with the loading and refreshing f
 
 Our application will be accessing these data in order to react accordingly. More on that later...
 
-## 🗒 Your first task
+## 🗒 Your first task 
+### Copy your API key
 
-<div background="rgba(0, 0, 131, 0.5)">
-🔑 Copy your API key
+**Locate the `api_key.ts` file in the root of the project and replace the sample key by your own.**
 
-Locate the <code>api_key.ts</code> file in the root of the project and replace the sample key by your own.
+##### Where is your API key?
 
-</div>
-
-> You can find your API key in your profile on the [OpenWeather website](https://home.openweathermap.org/api_keys).
+> 💡You can find your API key in your profile on the [OpenWeather website](https://home.openweathermap.org/api_keys).
 >
 > ![](../../assets/openweather_1.png)
 >
