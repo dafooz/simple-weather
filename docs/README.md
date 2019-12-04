@@ -21,4 +21,4 @@ The output of your work should look like this once it's complete:
 
 ### Let's get started!
 
-We ca now [start working on the application](./workshop/intro.md)!
+We can now [start working on the application](./workshop/intro.md)!
