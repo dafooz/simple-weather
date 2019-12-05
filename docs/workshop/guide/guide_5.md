@@ -56,7 +56,9 @@ This `WeatherIcon` component is a bit more complex than the `LocationIcon` icon 
 export const WeatherIcon = ({ icon }: { icon: string }) => (
   <Image
     style={styles.weatherIcon}
-    source={{ uri: `https://openweathermap.org/img/wn/${icon}@2x.png` }}
+    source={ 
+    	{ uri: `https://openweathermap.org/img/wn/${icon}@2x.png` } 
+    }
   />
 );
 ```
