@@ -51,16 +51,17 @@ We once again use a custom component in order to display the correct weather ico
 
 This `WeatherIcon` component is a bit more complex than the `LocationIcon` icon we used for the location component (It is located under *components > base > Icons.tsx*).
 
+
 ```typescript
 export const WeatherIcon = ({ icon }: { icon: string }) => (
   <Image
     style={styles.weatherIcon}
-    source={{
-      uri: `https://openweathermap.org/img/wn/${icon}@2x.png`,
-    }}
+    source={{ uri: `https://openweathermap.org/img/wn/${icon}@2x.png` }}
   />
 );
 ```
+
+
 This 'icon' is actually an image that is rendered via the `Image` component of React Native. As you can see this component is very similar to the `ImageBackground` component we used to display the application background. 
 
 >💡 Despite the similarity there is a **huge** difference: `Image` in React Native cannot have any content while `ImageBackground` can... 
