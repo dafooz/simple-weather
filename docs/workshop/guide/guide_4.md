@@ -32,9 +32,9 @@ If you check the code you copied, you will notice some new components:
 
 * `SafeAreaView`: this component is a React Native component allowing us to deal with the phones having a notch, such as the iPhones starting at the X model. It will automatically define which 'zone' of the screen is safe to display content. Whitout this component, the `Main app screen text` would be hidden behind the clock...
 
-* `WeatherDisplay`: this is our main application component, we will work on it next
+* `WeatherDisplay`: this is our main application component, we will work on it next.
 
-* `LastRefreshTime`: this is a very simple custom component displaying the last refresh date and time based on the `lastRefresh` prop that we pass to it. The value of this prop is provided by the `useLocation` hook by keeping a reference to the last time the location was retrieved.
+* `LastRefreshTime`: this is a very simple custom component displaying the last refresh date and time based on the `lastRefresh` prop that we pass to it. The value of this prop is provided by the `useLocation` hook by keeping a reference to the last time the location was retrieved. (see *components > base > LastRefreshTime.tsx*)
 
 >💡 You can try removing the `SafeAreaView` component and see what it looks like on a device with a notch 😉.
 
@@ -62,4 +62,4 @@ Your application should now look like:
 
 ---
 
-Next: [Adding content in the different components ➤](./guide_4.md)
+Next: [Adding content in the different components ➤](./guide_5.md)

@@ -10,6 +10,8 @@ In the case of this application, we will be using the concept of **hooks** from 
 
 In this application, we will be using [UI Kitten](https://akveo.github.io/react-native-ui-kitten/), a framework exposing a [design system](https://eva.design/?utm_source=eva_documentation&utm_medium=hero), [components](https://akveo.github.io/react-native-ui-kitten/docs/components/components-overview) and fully integrated with [Eva Icons](https://akveo.github.io/eva-icons/#/).
 
+>💡 This framework is not required as we can achieve the same result without it but it's to show you that it is possible in React Native.
+
 
 # Flow of the application
 

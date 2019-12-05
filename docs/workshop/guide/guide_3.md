@@ -67,7 +67,7 @@ use the icon property of this weather as value, otherwise use the string 'none'
 ```
 
 ### The `BackgroundImage` component
-You can check the content of the `BackgroundImage` component:
+You can check the content of the `BackgroundImage` component (under *components > BackgroundImage.tsx*):
 
 ```typescript
 export const BackgroundImage = ({
