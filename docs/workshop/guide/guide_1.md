@@ -83,7 +83,7 @@ const getWeather = async (latitude: number, longitude: number) => {
 
 This function does the actual call to the API. It uses the `API_KEY` that OpenWeather provided to you upon registration. It builds the URL that will be used to query this API. 
 
-As you can see we will be using the position of the user together with this`API_KEY`. As you might have understood by now, the coordinates where retrived by the `useLocation` hook and passed to this one.
+As you can see we will be using the position of the user together with this `API_KEY`. As you might have understood by now, the coordinates where retrived by the `useLocation` hook and passed to this one.
 
 Once the data are loaded (yes of course it's asynchronous!) we will transform the raw forecast from the API into some more tailored structure for our app. The utility method `transformForecast` is in charge of that.
 
