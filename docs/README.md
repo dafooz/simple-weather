@@ -17,7 +17,8 @@ The app that we will create will use the geolocation of the device and use it to
 
 The output of your work should look like this once it's complete:
 
-<div width="100%" style="display: flex; justify-content: center"><img src='./assets/appscreen-1.png' height="500"/></div>
+<img src='./assets/appscreen-1.png' height="500"/>
+
 
 ### Let's get started!
 
