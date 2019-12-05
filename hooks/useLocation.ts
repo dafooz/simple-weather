@@ -14,12 +14,12 @@ export const useLocation = () => {
   }, []);
 
   const getLocationAsync = async () => {
-    let { status } = await askAsync(LOCATION);
+    const { status } = await askAsync(LOCATION);
     if (status !== 'granted') {
       setError('Permission to access location was denied');
     }
 
-    let location = await Location.getCurrentPositionAsync({});
+    const location = await Location.getCurrentPositionAsync({});
     setLastRefresh(Date.now);
     setLocation({ ...location });
   };

@@ -12,7 +12,7 @@ import { BackgroundImage, WeatherDisplay, LastRefreshTime } from './components';
 import { appStyles } from './styles/styles';
 
 export default function App() {
-  const { forecast, loading, refreshWeather, lastRefresh, setRefreshing } = useForecast();
+  const { forecast, loading, refreshWeather, lastRefresh } = useForecast();
 
   return (
     <>
@@ -22,15 +22,13 @@ export default function App() {
       <ApplicationProvider mapping={mapping} theme={lightTheme}>
         <BackgroundImage conditions={forecast && forecast.weather ? forecast.weather.icon : 'none'}>
           <View style={appStyles.container}>
+            {/* If the application is loading, show the device loader */}
             {loading && <ActivityIndicator size="large" color="#FFF" />}
+            {/* if the data are loaded, show the app */}
             {!loading && forecast && (
               <View style={appStyles.globalContainer}>
                 <SafeAreaView style={appStyles.safearea}>
-                  <WeatherDisplay
-                    forecast={forecast}
-                    refresh={refreshWeather}
-                    setRefreshing={setRefreshing}
-                  />
+                  <WeatherDisplay forecast={forecast} refresh={refreshWeather} />
                   <View style={{ alignItems: 'center' }}>
                     <LastRefreshTime lastRefresh={lastRefresh} />
                   </View>

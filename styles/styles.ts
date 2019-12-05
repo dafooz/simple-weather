@@ -34,6 +34,7 @@ export const currentWeatherStyles = StyleSheet.create({
 });
 
 export const humidityStyles = StyleSheet.create({
+  container: { flexGrow: 1, flexDirection: 'row', alignItems: 'center' },
   text: {
     marginLeft: 20,
     fontSize: 20,
