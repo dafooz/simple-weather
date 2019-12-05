@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { ActivityIndicator, SafeAreaView, StyleSheet, View, Text } from 'react-native';
+import { ActivityIndicator, SafeAreaView, View } from 'react-native';
 
-import { ApplicationProvider, IconRegistry, Layout } from 'react-native-ui-kitten';
+import { ApplicationProvider, IconRegistry } from 'react-native-ui-kitten';
 
 import { light as lightTheme, mapping } from '@eva-design/eva';
 import { EvaIconsPack } from '@ui-kitten/eva-icons';
@@ -18,11 +18,13 @@ export default function App() {
     <>
       {/* Add the icon registry to have access to all the EvaIcons. Available icons: https://akveo.github.io/eva-icons/#/*/}
       <IconRegistry icons={EvaIconsPack} />
-      {/* Application rpovider for UI Kitten. See https://akveo.github.io/react-native-ui-kitten/ */}
+      {/* Application provider for UI Kitten. See https://akveo.github.io/react-native-ui-kitten/ */}
       <ApplicationProvider mapping={mapping} theme={lightTheme}>
         <BackgroundImage conditions={forecast && forecast.weather ? forecast.weather.icon : 'none'}>
-          <Layout style={appStyles.container}>
+          <View style={appStyles.container}>
+            {/* If the application is loading, show the device loader */}
             {loading && <ActivityIndicator size="large" color="#FFF" />}
+            {/* if the data are loaded, show the app */}
             {!loading && forecast && (
               <View style={appStyles.globalContainer}>
                 <SafeAreaView style={appStyles.safearea}>
@@ -33,7 +35,7 @@ export default function App() {
                 </SafeAreaView>
               </View>
             )}
-          </Layout>
+          </View>
         </BackgroundImage>
       </ApplicationProvider>
     </>
