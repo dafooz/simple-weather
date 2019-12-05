@@ -4,7 +4,7 @@ Now that we have the background, let's replace that `Let's get started!` text wi
 
 ## Adding the components to the `App.tsx` file
 
-Let's replace everything within the `` opening and closing tags with the following:
+Let's replace everything within the `BackgroundImage` opening and closing tags with the following:
 
 ```typescript
 <View style={appStyles.container}>
