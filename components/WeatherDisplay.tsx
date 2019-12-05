@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 
 import { Forecast } from '../utils/types';
 
@@ -18,10 +18,6 @@ export const WeatherDisplay = ({
   refresh: () => void;
 }) => (
   <View style={weatherDisplayStyles.container}>
-    <Location city={location.city} country={location.country} refresh={refresh} />
-    <CurrentWeather weather={weather} />
-    <Temperature temp={info.temp} temp_min={info.temp_min} temp_max={info.temp_max} />
-    <Humidity humidity={info.humidity} />
-    <WindSpeed direction={wind.direction} speed={wind.speed} />
+    <Text>Main app screen</Text>
   </View>
 );

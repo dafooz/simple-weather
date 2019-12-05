@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ActivityIndicator, SafeAreaView, View } from 'react-native';
+import { ActivityIndicator, SafeAreaView, View, Text } from 'react-native';
 
 import { ApplicationProvider, IconRegistry } from 'react-native-ui-kitten';
 
@@ -20,23 +20,16 @@ export default function App() {
       <IconRegistry icons={EvaIconsPack} />
       {/* Application provider for UI Kitten. See https://akveo.github.io/react-native-ui-kitten/ */}
       <ApplicationProvider mapping={mapping} theme={lightTheme}>
-        <BackgroundImage conditions={forecast && forecast.weather ? forecast.weather.icon : 'none'}>
-          <View style={appStyles.container}>
-            {/* If the application is loading, show the device loader */}
-            {loading && <ActivityIndicator size="large" color="#FFF" />}
-            {/* if the data are loaded, show the app */}
-            {!loading && forecast && (
-              <View style={appStyles.globalContainer}>
-                <SafeAreaView style={appStyles.safearea}>
-                  <WeatherDisplay forecast={forecast} refresh={refreshWeather} />
-                  <View style={{ alignItems: 'center' }}>
-                    <LastRefreshTime lastRefresh={lastRefresh} />
-                  </View>
-                </SafeAreaView>
-              </View>
-            )}
-          </View>
-        </BackgroundImage>
+        <View style={appStyles.container}>
+          {/* If the application is loading, show the device loader */}
+          {loading && <ActivityIndicator size="large" color="#FFF" />}
+          {/* if the data are loaded, show the app */}
+          {!loading && forecast && (
+            <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+              <Text>Let's get started!</Text>
+            </View>
+          )}
+        </View>
       </ApplicationProvider>
     </>
   );

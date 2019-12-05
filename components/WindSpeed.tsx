@@ -6,7 +6,6 @@ import { transformMStoKMH } from '../utils/dataTransformer';
 
 export const WindSpeed = ({ direction, speed }: { direction: string; speed: number }) => (
   <View style={windSpeedStyles.container}>
-    <WindSpeedIcon />
-    <Text style={windSpeedStyles.text}>{`${direction} @ ${transformMStoKMH(speed)} km/h`}</Text>
+    <Text>Windspeed info</Text>
   </View>
 );

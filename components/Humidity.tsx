@@ -5,7 +5,6 @@ import { humidityStyles } from '../styles/styles';
 
 export const Humidity = ({ humidity }: { humidity: number }) => (
   <View style={humidityStyles.container}>
-    <HumidityIcon />
-    <Text style={humidityStyles.text}>{`${humidity}%`}</Text>
+    <Text>Humidity info</Text>
   </View>
 );
