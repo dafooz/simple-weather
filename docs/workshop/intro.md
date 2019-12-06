@@ -18,10 +18,10 @@ The sample project can be found on GitHub:
 
 Go ahead with your favorite graphical client (SourceTree, Fork,... ) or command line and clone it!
 
->Note that the project has 2 branches:
+> Note that the project has 2 branches:
 >
 > - `workshop` (this is the branch you should checkout for this workshop)
-> - `final` (this branch contains the fully working app that you will build during the workshop).
+> - `master` (this branch contains the fully working app that you will build during the workshop).
 
 ## 📖 The steps
 
