@@ -15,7 +15,9 @@ Let's replace everything within the `BackgroundImage` opening and closing tags w
     <View style={appStyles.globalContainer}>
       <SafeAreaView style={appStyles.safearea}>
         <WeatherDisplay forecast={forecast} refresh={refreshWeather} />
-        <View style={{ alignItems: 'center' }}>
+        <View style={
+            { alignItems: 'center' }
+        }>
           <LastRefreshTime lastRefresh={lastRefresh} />
         </View>
       </SafeAreaView>
